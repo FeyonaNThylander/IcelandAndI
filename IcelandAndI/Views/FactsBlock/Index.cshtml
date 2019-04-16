@@ -1,0 +1,25 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+
+@model IcelandAndI.Models.Blocks.FactsBlock
+
+
+
+<div class="fh5co-counters" style="background-image: url(@Url.Content("~/Static/images/hero.jpg"));" data-stellar-background-ratio="0.5" id="counter-animate">
+    <div class="fh5co-narrow-content animate-box">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <span class="fh5co-counter js-counter" data-from="0" data-to="@Html.PropertyFor(m => m.HighestPeakNumber)" data-speed="5000" data-refresh-interval="50"></span>
+                <span class="fh5co-counter-label">@Html.PropertyFor(m => m.HighestPeakText)</span>
+            </div>
+            <div class="col-md-4 text-center">
+                <span class="fh5co-counter js-counter" data-from="0" data-to="@Html.PropertyFor(m => m.PopulationNumber)" data-speed="5000" data-refresh-interval="50"></span>
+                <span class="fh5co-counter-label">@Html.PropertyFor(m => m.PopulationText)</span>
+            </div>
+            <div class="col-md-4 text-center">
+                <span class="fh5co-counter js-counter" data-from="0" data-to="@Html.PropertyFor(m => m.AreaNumber)" data-speed="5000" data-refresh-interval="50"></span>
+                <span class="fh5co-counter-label">@Html.PropertyFor(m => m.AreaText)</span>
+            </div>
+        </div>
+    </div>
+</div>

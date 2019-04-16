@@ -1,0 +1,10 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+
+@model IcelandAndI.Models.Blocks.EventBlock
+
+<div style="border: solid 2px blue;">
+    @Html.PropertyFor(m => m.EventDateTime)
+    @Html.PropertyFor(m => m.EventLocation)
+    @Html.PropertyFor(m => m.EventName)
+</div>

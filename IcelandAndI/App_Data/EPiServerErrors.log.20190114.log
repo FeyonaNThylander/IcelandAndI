@@ -1,0 +1,20 @@
+﻿2019-01-14 01:19:37,580 [59] ERROR EPiServer.Search.Internal.RequestHandler: Update batch could not be sent to service uri 'http://localhost:54875/IndexingService/IndexingService.svc/update/?accesskey=local'
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EPiServer.Search.Internal.RequestHandler.MakeHttpRequest(String url, String method, IndexingServiceReference indexingServiceReference, Stream postData, Action`1 responseStreamHandler)
+   at EPiServer.Search.Internal.RequestHandler.SendRequest(SyndicationFeed feed, String namedIndexingService)
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EPiServer.Search.Internal.RequestHandler.MakeHttpRequest(String url, String method, IndexingServiceReference indexingServiceReference, Stream postData, Action`1 responseStreamHandler)
+   at EPiServer.Search.Internal.RequestHandler.SendRequest(SyndicationFeed feed, String namedIndexingService)
+2019-01-14 01:19:37,604 [59] ERROR EPiServer.Search.Internal.RequestQueueHandler: Send batch for named index 'serviceName' failed. Items are left in queue.
+2019-01-14 01:20:08,666 [24] ERROR EPiServer.Search.Internal.RequestHandler: Update batch could not be sent to service uri 'http://localhost:54875/IndexingService/IndexingService.svc/update/?accesskey=local'
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EPiServer.Search.Internal.RequestHandler.MakeHttpRequest(String url, String method, IndexingServiceReference indexingServiceReference, Stream postData, Action`1 responseStreamHandler)
+   at EPiServer.Search.Internal.RequestHandler.SendRequest(SyndicationFeed feed, String namedIndexingService)
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EPiServer.Search.Internal.RequestHandler.MakeHttpRequest(String url, String method, IndexingServiceReference indexingServiceReference, Stream postData, Action`1 responseStreamHandler)
+   at EPiServer.Search.Internal.RequestHandler.SendRequest(SyndicationFeed feed, String namedIndexingService)
+2019-01-14 01:20:08,669 [24] ERROR EPiServer.Search.Internal.RequestQueueHandler: Send batch for named index 'serviceName' failed. Items are left in queue.

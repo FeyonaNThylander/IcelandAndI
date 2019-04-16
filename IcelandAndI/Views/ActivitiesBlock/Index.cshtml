@@ -1,0 +1,26 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+@model IcelandAndI.Models.Blocks.ActivitiesBlock
+
+
+
+
+<div id="fh5co-blog" class="fh5co-bg-section">
+    @*<div class="container">
+        <div class="row">*@
+    <div class="col-md-4" style="padding-left: 52px;">
+        <div class="row" style="margin-right: -25px; margin-bottom: 15px;">
+            <div class="col-md-12">
+                <div class="fh5co-blog animate-box">
+                    <a href="@Url.ContentUrl(Model.BlockLink)"><img class="img-responsive" src="@Url.ContentUrl(Model.PageImage)" alt=""></a>
+                    <div class="blog-text">
+                        <h3><a href="#">@Html.PropertyFor(m => m.Title)</a></h3>
+                        <p>@Html.PropertyFor(m => m.MainBody)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*</div>
+        </div>*@
+</div>

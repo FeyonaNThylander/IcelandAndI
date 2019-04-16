@@ -1,0 +1,41 @@
+﻿@using IcelandAndI.Business.ExtensionMethods
+@using IcelandAndI.Models.ViewModels
+@using IcelandAndI.Models.Pages
+@model IPageViewModel<SitePageData>
+
+
+<footer>
+    <div id="footer" style="background-color: black; padding-bottom: 1rem;">
+        <div class="container">
+            <div class="row">
+
+                    @Html.PropertyFor(m => m.StartPage.AboutIcelandBlockArea)
+
+                <div class="col-md-4 col-md-push-1">
+                    <h3 class="section-title" style="color: white;">Links</h3>
+                    <ul>
+                        @foreach (var page in Model.MenuPages)
+                        {
+                            <li>@Html.ContentLink(page)</li>
+                        }
+                    </ul>
+                </div>
+                <div class="col-md-4 col-md-push-1">
+                    <h3 style="color: white;">Our Address</h3>
+                    @Html.PropertyFor(m => m.StartPage.ContactBlockArea)
+                </div>
+
+                @*<div class="col-md-4">
+
+                        @Html.PropertyFor(m => m.StartPage.MainContentArea)
+
+                    </div>*@
+            </div>
+            <div class="row copy-right">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <p><strong>© @Html.PropertyFor(m => m.StartPage.FooterText)</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

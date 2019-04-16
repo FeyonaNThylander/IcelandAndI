@@ -1,0 +1,82 @@
+﻿@using IcelandAndI.Models.ViewModels
+@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+@model PageViewModel<IcelandAndI.Models.Pages.AboutUsPage>
+
+
+
+
+<div id="fh5co-page">
+    <div id="fh5co-about">
+        <div class="container">
+
+            @*MAIN BODY XSTRING*@
+
+            <div class="row animate-box">
+                <div class="col-md-8 col-md-offset-2 text-center animate-box">
+                    <div class="about-content" style="margin-left: -20rem; width: 120rem; margin-bottom: -2rem;">
+                        <h1>@Html.PropertyFor(m => m.CurrentPage.Heading)</h1>
+                        <p style="position: relative">@Html.PropertyFor(m => m.CurrentPage.MainBody)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*VIDEO SECTION*@
+
+    <div id="fh5co-work-section" style="background-color: black;">
+        <div class="container">
+            <div class="row animate-box">
+                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                    <h2 style="color: white;">@Html.PropertyFor(m => m.CurrentPage.VideosTitle)</h2>
+                    <p style="color: white;">@Html.PropertyFor(m => m.CurrentPage.VideosText)</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 text-center animate-box">
+                    <div class="work" style="background-image: url(images/img-1.jpg);">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/eA7yV97ylQ0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center animate-box">
+                    <div class="work" style="background-image: url(images/img-2.jpg);">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/C4_Nmi_RZ4U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center animate-box">
+                    <div class="work" style="background-image: url(images/img-3.jpg);">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/qAkr5ug43KM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center animate-box">
+                    <div class="work" style="background-image: url(images/img-4.jpg);">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/jfyd6RAeCgo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @*DISCOVER MORE SECTION*@
+
+    <div id="fh5co-blog" class="fh5co-bg-section">
+        <div class="container">
+            <div class="row animate-box">
+                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                    <h2 style="padding-top: 90px">@Html.PropertyFor(m => m.CurrentPage.Introduction)</h2>
+                </div>
+            </div>
+            <div class="row" style="display: inline-block;float: left;padding-bottom: 10rem;">
+
+                @Html.PropertyFor(m => m.CurrentPage.ContentBlockArea)
+
+            </div>
+        </div>
+    </div>
+
+    @Html.PropertyFor(m => m.CurrentPage.MainContentArea)
+
+</div>

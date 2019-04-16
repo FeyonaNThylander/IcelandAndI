@@ -1,0 +1,47 @@
+﻿@using IcelandAndI.Models.ViewModels
+@using IcelandAndI.Models.Pages
+@using IcelandAndI.Business.ExtensionMethods
+@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+@model IPageViewModel<SitePageData>
+
+<div class="menu-container span">
+
+    @helper ItemTemplate(MenuItem firstLevelItem)
+    {
+        <div class="sidenav">
+            <span>
+                <a href="@Url.ContentUrl(firstLevelItem.Page.PageLink)" class="@(firstLevelItem.Page.ContentLink.CompareToIgnoreWorkID(Model.CurrentPage.ContentLink)? "accordion-toggle active" : "accordion-toggle")" data-parent="#alloyDrop">
+                    @firstLevelItem.Page.PageName
+                    <i class="@(firstLevelItem.HasChildren.Value ? "right" : "right")"></i>
+                </a>
+            </span>
+        </div>
+        <span>
+            <div class="sidenav">
+                <ul style="list-style-type:none">
+                    @Html.MenuList(firstLevelItem.Page.ContentLink, SubLevelItemTemplate)
+                </ul>
+            </div>
+        </span>
+    }
+    @helper SubLevelItemTemplate(MenuItem subLevelItem)
+    {
+        <span>
+            <li class="@(subLevelItem.Selected ? "active" : null)">
+                @Html.PageLink(subLevelItem.Page)
+                @*To show more levels call Html.MenuList recursively here if subLevelItem.Selected == true*@
+                @Html.MenuList(subLevelItem.Page.ContentLink)
+            </li>
+        </span>
+    }
+
+    <div class="sidenav">
+        <div class="sidenav">
+            @if (Model.Section != null)
+            {
+                <span>@Html.MenuList(Model.Section.ContentLink, ItemTemplate)</span>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+
+@model IcelandAndI.Models.Media.ImageFile
+
+<div class="row" style="position: center;">
+    <figure>         
+    <img src="@Url.ContentUrl(Model.ContentLink)" alt="@Model.Description" />         
+    </figure>
+</div>

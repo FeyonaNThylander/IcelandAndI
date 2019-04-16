@@ -1,0 +1,10 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+@model IcelandAndI.Models.Blocks.AboutIcelandBlock
+
+    <div class="col-md-4">
+        <h3 class="section-title" style="color: white;">@Html.PropertyFor(m => m.Heading)</h3>
+        <p>@Html.PropertyFor(m => m.MainBody)</p>
+    </div>
+
+  

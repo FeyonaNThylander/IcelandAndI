@@ -1,0 +1,45 @@
+﻿@using IcelandAndI.Models.ViewModels
+@using IcelandAndI.Models.Pages
+@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+@model PageViewModel<IcelandAndI.Models.Pages.ActivitiesArchivePage>
+
+
+
+<div id="fh5co-page">
+    <div id="fh5co-blog">
+        <div class="container">
+
+            @*MAIN BODY XSTRING*@
+
+            <div class="row animate-box">
+                <div class="col-md-8 col-md-offset-2 text-center animate-box">
+                    <div class="about-content">
+                        <h1>@Html.PropertyFor(m => m.CurrentPage.Heading)</h1>
+                        <p style="position: relative">@Html.PropertyFor(m => m.CurrentPage.MainBody)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*ACTIVITIES SECTION*@
+
+    <div id="fh5co-blog" class="fh5co-bg-section">
+        <div class="container">
+            <div class="row animate-box">
+                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                    <h2 style="padding-top: 90px">@Html.PropertyFor(m => m.CurrentPage.Introduction)</h2>
+                </div>
+            </div>
+            <div class="row" style="display: inline-block;float: left;padding-bottom: 10rem; margin-right: -200px; margin-left: -200px;">
+
+                @Html.PropertyFor(m => m.CurrentPage.ActivitiesMainContentArea)
+
+            </div>
+        </div>
+    </div>
+
+    @Html.PropertyFor(m => m.CurrentPage.MainContentArea)
+
+</div>

@@ -1,0 +1,11 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+@model IcelandAndI.Models.Blocks.ContactUsBlock
+
+
+<ul class="contact-info">
+    <li><i class="icon-location-pin"></i>@Html.PropertyFor(m => m.Address)</li>
+    <li><i class="icon-phone2"></i>@Html.PropertyFor(m => m.Telephone)</li>
+    <li><i class="icon-mail"></i><a href="mailto:someone@icelandandi.com">@Html.PropertyFor(m => m.Email)</a></li>
+    <li><i class="icon-globe2"></i><a href="http://localhost:54875/">@Html.PropertyFor(m => m.OurWebsite)</a></li>
+</ul>

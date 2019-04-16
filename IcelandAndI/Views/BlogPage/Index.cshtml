@@ -1,0 +1,22 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+@using IcelandAndI.Models.Pages
+@using IcelandAndI.Models.ViewModels
+
+@model PageViewModel<ArticlePage>
+@{
+    Layout = "~/Views/Shared/Layouts/_StandardPageLayout.cshtml";
+}
+@*<div id="fh5co-about">
+    <div class="row animate-box">
+        <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+            <h2>@Html.PropertyFor(x => x.CurrentPage.Heading)</h2>
+            <p>@Html.PropertyFor(x => x.CurrentPage.MainBody)</p>
+
+            <div @Html.EditAttributes(x => x.CurrentPage.PageImage)>
+                <img src="@Url.ContentUrl(Model.CurrentPage.PageImage)" />
+            </div>
+        </div>
+    </div>
+</div>
+@Html.PropertyFor(m => m.CurrentPage.MainContentArea, new { CssClass = "row-maincontent" })*@

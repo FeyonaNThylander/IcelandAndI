@@ -1,0 +1,24 @@
+﻿@using IcelandAndI.Business.ExtensionMethods
+@using IcelandAndI.Models.ViewModels
+@using IcelandAndI.Models.Pages
+@model IPageViewModel<SitePageData>
+
+
+
+<nav id="fh5co-main-nav" role="navigation">
+    <a href="@Url.ContentUrl(Model.StartPage.ContentLink)" class="js-fh5co-nav-toggle fh5co-nav-toggle active"><i></i></a>
+    <div class="js-fullheight fh5co-table">
+        <div class="fh5co-table-cell js-fullheight">
+            <h1 class="text-center"><a class="fh5co-logo" href="@Url.ContentUrl(Model.StartPage.ContentLink)">Iceland &amp; I</a></h1>
+            <ul>
+                @foreach (var page in Model.MenuPages)
+                {
+                    <li>@Html.ContentLink(page)</li>
+                  
+                }
+
+            </ul>
+        </div>
+    </div>
+</nav>
+

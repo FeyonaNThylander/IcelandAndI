@@ -1,0 +1,31 @@
+﻿@using IcelandAndI.Models.ViewModels
+@using IcelandAndI.Models.Pages
+@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+@model PageViewModel<IcelandAndI.Models.Pages.ArticlePage>
+
+
+<div id="fh5co-page">
+    @Html.Partial("_LeftNavigation", Model)
+
+    <div id="fh5co-about">
+
+        <div class="container">
+
+            @*MAIN BODY XSTRING*@
+
+            <div class="row animate-box">
+                <div class="col-md-8 col-md-offset-2 text-center" style="margin:auto; width: 120rem;">
+                    <div class="about-content">
+                        <h1>@Html.PropertyFor(m => m.CurrentPage.Heading)</h1>
+                        <p style="position: relative">@Html.PropertyFor(m => m.CurrentPage.MainBody)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row" @*style="display: inline-block;float: left;padding-bottom: 10rem;"*@>
+                @Html.PropertyFor(m => m.CurrentPage.MainContentArea)
+            </div>
+        </div>
+        
+    </div>
+</div>
